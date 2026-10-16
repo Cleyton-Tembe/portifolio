@@ -30,10 +30,30 @@ export const profile = {
 };
 
 export const contacts = [
-  { id: "email", label: "Email", value: "accesscodetalk3r@gmail.com", href: "mailto:accesscodetalk3r@gmail.com" },
-  { id: "phone", label: "Telefone", value: "+258 85 278 1397", href: "tel:+258852781397" },
-  { id: "whatsapp", label: "WhatsApp", value: "+258 85 278 1397", href: "https://wa.me/258852781397" },
-  { id: "github", label: "GitHub", value: "Cleyton-Tembe", href: "https://github.com/Cleyton-Tembe" },
+  {
+    id: "email",
+    label: "Email",
+    value: "accesscodetalk3r@gmail.com",
+    href: "mailto:accesscodetalk3r@gmail.com",
+  },
+  {
+    id: "phone",
+    label: "Telefone",
+    value: "+258 85 278 1397",
+    href: "tel:+258852781397",
+  },
+  {
+    id: "whatsapp",
+    label: "WhatsApp",
+    value: "+258 85 278 1397",
+    href: "https://wa.me/258852781397",
+  },
+  {
+    id: "github",
+    label: "GitHub",
+    value: "Cleyton-Tembe",
+    href: "https://github.com/Cleyton-Tembe",
+  },
 ] as const;
 
 export type Contact = (typeof contacts)[number];
@@ -45,7 +65,8 @@ export const education = [
     title: "Licenciatura em Engenharia Informática",
     org: "Faculdade de Engenharia — Universidade Eduardo Mondlane",
     period: "3.º ano (em curso)",
-    detail: "Engenharia de Software, Programação Web, Bases de Dados e Scrum (nível básico).",
+    detail:
+      "Engenharia de Software, Programação Web, Bases de Dados e Scrum (nível básico).",
     rarity: "exotic",
   },
   {
@@ -68,8 +89,17 @@ export const education = [
 
 // "Talentos": competências pessoais.
 export const talents = [
-  { name: "Ética de trabalho", desc: "Forte ética de trabalho e elevado nível de dedicação." },
-  { name: "Aprendizagem rápida", desc: "Aprendo depressa e adapto-me com facilidade." },
-  { name: "Pensamento analítico", desc: "Orientado para a resolução de problemas." },
+  {
+    name: "Ética de trabalho",
+    desc: "Forte ética de trabalho e elevado nível de dedicação.",
+  },
+  {
+    name: "Aprendizagem rápida",
+    desc: "Aprendo depressa e adapto-me com facilidade.",
+  },
+  {
+    name: "Pensamento analítico",
+    desc: "Orientado para a resolução de problemas.",
+  },
   { name: "Trabalho em equipa", desc: "Colaboro bem em equipa e com Scrum." },
 ] as const;

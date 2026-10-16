@@ -43,8 +43,8 @@ function ItemCard({
       type="button"
       onClick={onClick}
       aria-pressed={selected}
-      className={`group relative flex h-full w-full flex-col overflow-hidden rounded-xl border bg-panel-solid p-3.5 text-left transition-colors sm:p-4 ${
-        selected ? "border-white" : "border-line hover:border-line-strong"
+      className={`group relative flex h-full w-full flex-col overflow-hidden rounded-xl border bg-panel-solid p-3.5 text-left hover:border-line-strong transition-colors sm:p-4 ${
+        selected ? "border-transparent" : "hover:border-line-strong border-line"
       }`}
       style={
         selected
@@ -262,7 +262,7 @@ export function Inventory({ focus }: { focus?: string }) {
             (_, i) => (
               <li
                 key={`empty-${i}`}
-                className="h-[150px] rounded-xl border border-dashed border-line sm:h-[170px]"
+                className="h-37.5 rounded-xl border border-dashed border-line sm:h-[170px]"
                 aria-hidden="true"
               />
             ),
@@ -270,7 +270,7 @@ export function Inventory({ focus }: { focus?: string }) {
         </motion.ul>
 
         <aside
-          className="panel brackets sticky top-24 hidden self-start overflow-hidden p-5 lg:block"
+          className="panel sticky top-24 hidden self-start overflow-hidden p-5 lg:block"
           aria-live="polite"
         >
           {selected && (

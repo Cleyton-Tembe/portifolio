@@ -61,7 +61,9 @@ export default function App() {
   const touch = useRef<{ x: number; y: number; ok: boolean } | null>(null);
   const onTouchStart = (e: React.TouchEvent) => {
     const t = e.touches[0];
-    const ok = !(e.target as HTMLElement).closest("[data-noswipe], [role=dialog]");
+    const ok = !(e.target as HTMLElement).closest(
+      "[data-noswipe], [role=dialog]",
+    );
     touch.current = { x: t.clientX, y: t.clientY, ok };
   };
   const onTouchEnd = (e: React.TouchEvent) => {
@@ -71,7 +73,8 @@ export default function App() {
     const t = e.changedTouches[0];
     const dx = t.clientX - start.x;
     const dy = t.clientY - start.y;
-    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.8) step(dx < 0 ? 1 : -1);
+    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.8)
+      step(dx < 0 ? 1 : -1);
   };
 
   const prevScreen = useRef<ScreenId>(screen);
@@ -83,7 +86,9 @@ export default function App() {
   return (
     <div className="relative isolate min-h-dvh">
       <Background screen={screen} />
-      <AnimatePresence>{!booted && <Boot onDone={finishBoot} />}</AnimatePresence>
+      <AnimatePresence>
+        {!booted && <Boot onDone={finishBoot} />}
+      </AnimatePresence>
 
       <TopNav current={screen} onStep={step} />
 
@@ -108,7 +113,7 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      <HintBar current={screen} />
+      <HintBar />
       <BottomNav current={screen} />
     </div>
   );

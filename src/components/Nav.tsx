@@ -43,7 +43,10 @@ export function TopNav({
 }) {
   const time = useClock();
   return (
-    <header className="sticky top-0 z-30 border-b border-line bg-bg/85 backdrop-blur-md">
+    <motion.header
+      layoutRoot
+      className="sticky top-0 z-30 border-b border-line bg-bg/85 backdrop-blur-md"
+    >
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 lg:h-[72px] lg:px-8">
         <a href={href("inicio")} className="flex min-w-0 items-center gap-3">
           <Emblem />
@@ -107,14 +110,15 @@ export function TopNav({
           <span className="font-bold text-ink">{time}</span>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
 
 /** No celular o menu desce para uma barra inferior com ícones. */
 export function BottomNav({ current }: { current: ScreenId }) {
   return (
-    <nav
+    <motion.nav
+      layoutRoot
       aria-label="Menu principal"
       className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-bg/95 backdrop-blur-md lg:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
@@ -142,7 +146,7 @@ export function BottomNav({ current }: { current: ScreenId }) {
           );
         })}
       </ul>
-    </nav>
+    </motion.nav>
   );
 }
 
@@ -169,20 +173,9 @@ const hints: Record<ScreenId, [string, string][]> = {
 };
 
 /** Dicas de botões no rodapé, como nos menus de consola. */
-export function HintBar({ current }: { current: ScreenId }) {
+export function HintBar() {
   return (
-    <footer className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full mx-auto hidden max-w-7xl items-center justify-between px-8 pb-6 pt-2 lg:flex">
-      <div className="flex items-center gap-6">
-        {hints[current].map(([k, label]) => (
-          <span
-            key={label}
-            className="flex items-center gap-2 text-[15px] font-medium text-muted"
-          >
-            <span className="keycap">{k}</span>
-            {label}
-          </span>
-        ))}
-      </div>
+    <footer className="absolute -bottom-20 pb-7 left-1/2 transform -translate-x-1/2 w-full mx-auto hidden lg:text-center max-w-7xl items-center justify-end lg:flex">
       <span className="text-sm text-dim">
         © {new Date().getFullYear()} {profile.name}
       </span>

@@ -96,7 +96,7 @@ function SkillNode({
           mastered
             ? "border-accent bg-accent text-accent-ink"
             : "border-accent/60 bg-panel-solid text-ink"
-        } ${selected ? "!border-white shadow-[0_0_24px_rgb(34_211_238/0.6)]" : ""}`}
+        }`}
       >
         {!mastered && (
           <span
@@ -361,7 +361,7 @@ export function Skills() {
         </aside>
 
         <section
-          className="panel brackets relative min-h-[420px] overflow-hidden px-2 py-6 sm:px-6"
+          className="panel relative min-h-[420px] overflow-hidden px-2 py-6 sm:px-6"
           aria-label={`Ramo ${branch.name}`}
         >
           <div className="mb-6 hidden items-baseline justify-between px-2 lg:flex">
@@ -390,7 +390,7 @@ export function Skills() {
           </p>
         </section>
 
-        <aside className="panel hidden p-5 lg:block" aria-live="polite">
+        <aside className="panel h-fit hidden p-5 lg:block" aria-live="polite">
           <AnimatePresence mode="wait">
             <motion.div
               key={skill.id}
