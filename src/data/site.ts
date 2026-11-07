@@ -8,7 +8,7 @@ export const profile = {
     "Right now I'm going deep on TypeScript and Next.js, shipping one project at a time and learning from each one. These are the ones I'm proudest of.",
   github: "https://github.com/Cleyton-Tembe",
   email: "accesscodetalk3r@gmail.com",
-  linkedin: "www.linkedin.com/in/cleyton-tembe-48ab17446",
+  linkedin: "https://www.linkedin.com/in/cleyton-tembe-48ab17446",
   resume: {
     pdf: "Resume_Cleyton_Tembe.pdf",
     image: "resume.webp",

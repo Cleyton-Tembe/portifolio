@@ -3,6 +3,8 @@ import { profile } from "../data/site";
 import { GitHubIcon, LinkedInIcon } from "./icons";
 
 export default function Contact() {
+  const gmailLink = (to: string) =>
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}`;
   const button =
     "inline-flex min-h-12 items-center gap-2 rounded-full px-6 font-semibold transition-transform hover:-translate-y-0.5";
 
@@ -33,7 +35,9 @@ export default function Contact() {
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {profile.email && (
               <a
-                href={`mailto:${profile.email}`}
+                target="_blank"
+                rel="noreferrer"
+                href={gmailLink(profile.email)}
                 className={`${button} bg-glow-pink text-night`}
               >
                 <Mail className="size-4" aria-hidden="true" />

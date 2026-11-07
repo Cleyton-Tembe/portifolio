@@ -52,7 +52,7 @@ export default function ResumeDialog({ open, onClose }: Props) {
             alt={`Resume of ${profile.name}: Computer Engineering student at Eduardo Mondlane University and full-stack web developer`}
             width={1241}
             height={1754}
-            loading="lazy"
+            loading="eager"
             className="mx-auto block h-auto w-full max-w-180 rounded-md bg-white shadow-lg"
           />
         </div>
