@@ -10,8 +10,8 @@ export const profile = {
   email: "accesscodetalk3r@gmail.com",
   linkedin: "www.linkedin.com/in/cleyton-tembe-48ab17446",
   resume: {
-    pdf: "/Resume_Cleyton_Tembe.pdf",
-    image: "/resume.webp",
+    pdf: "Resume_Cleyton_Tembe.pdf",
+    image: "resume.webp",
   },
 };
 
