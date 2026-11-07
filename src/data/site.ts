@@ -33,7 +33,7 @@ export const featured: Project = {
   summary:
     "A full online store with Stripe payments, discount coupons, Redis caching and an admin panel with a sales chart.",
   stack: ["Next.js", "TypeScript", "MongoDB", "Stripe", "Redis"],
-  image: "/previews/ecommerce.png",
+  image: "previews/ecommerce.png",
   demo: "https://next-ecommerce-three-ebon.vercel.app/",
   code: gh("Next-Ecommerce"),
 };
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     summary:
       "Image posts, likes, comments, followers and notifications. Built with Server Actions, with sign-in through Clerk.",
     stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Clerk"],
-    image: "/previews/next-social.png",
+    image: "previews/next-social.png",
     demo: "https://next-social-media-62o8.vercel.app/",
     code: gh("Next-SocialMedia"),
   },
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     summary:
       "Interactive Recharts graphs, Framer Motion animations and searchable tables of products, users and orders.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    image: "/previews/next-dashboard.png",
+    image: "previews/next-dashboard.png",
     demo: "https://next-dashboard-inky-five-70.vercel.app/",
     code: gh("Next-Dashboard"),
   },
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     summary:
       "Playlists, a full player and a live list of what friends are listening to. Google sign-in and song uploads to Cloudinary.",
     stack: ["React", "TypeScript", "Express", "MongoDB", "Cloudinary"],
-    image: "/previews/spotify-clone.png",
+    image: "previews/spotify-clone.png",
     demo: "https://spotify-clone-8s82.onrender.com/",
     code: gh("Spotify-Clone"),
   },
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     summary:
       "Sign-up with email verification by code, password reset by email and JWT sessions in httpOnly cookies.",
     stack: ["React", "TypeScript", "Express", "MongoDB"],
-    image: "/previews/react-auth.png",
+    image: "previews/react-auth.png",
     demo: "https://reactauth-6j7h.vercel.app/",
     code: gh("ReactAuth"),
   },
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     summary:
       "Live messages with Socket.io, image sharing, a list of who's online and switchable themes.",
     stack: ["React", "Socket.io", "Express", "MongoDB"],
-    image: "/previews/chat-app.png",
+    image: "previews/chat-app.png",
     demo: "https://chat-app-s-1.onrender.com",
     code: gh("Chat-App-S"),
   },
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     summary:
       "Create, edit and delete products with images, in light or dark mode. React and Zustand on an Express API.",
     stack: ["React", "Express", "MongoDB"],
-    image: "/previews/product-store.png",
+    image: "previews/product-store.png",
     demo: "https://product-store-dpux.onrender.com",
     code: gh("Product-Store"),
   },
