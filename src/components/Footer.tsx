@@ -7,15 +7,7 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} {profile.name}
         </p>
-        <p>
-          Built with React and Tailwind CSS.{" "}
-          <a
-            href={profile.github}
-            className="font-semibold text-ink underline-offset-4 hover:underline"
-          >
-            See the code on GitHub
-          </a>
-        </p>
+        <p>Built with React, Tailwind CSS.</p>
       </div>
     </footer>
   );

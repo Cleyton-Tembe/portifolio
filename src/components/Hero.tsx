@@ -6,7 +6,6 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion";
-import { ArrowDown, FileText } from "lucide-react";
 import { profile } from "../data/site";
 
 const keys = [
@@ -108,7 +107,7 @@ function Keycap({
 
 const nameWords = profile.name.toUpperCase().split(" ");
 
-export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
+export default function Hero() {
   const rawX = useMotionValue(0);
   const rawY = useMotionValue(0);
   const px = useSpring(rawX, { stiffness: 60, damping: 20 });
@@ -214,44 +213,7 @@ export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
           {profile.role}. {profile.tagline}
         </p>
         <p className="mt-4 text-white/70">{profile.intro}</p>
-
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a
-            href="#work"
-            className="inline-flex min-h-12 items-center gap-2 rounded-full bg-glow-pink px-6 font-semibold text-night transition-transform hover:-translate-y-0.5"
-          >
-            See my projects
-            <ArrowDown className="size-4" aria-hidden="true" />
-          </a>
-          <button
-            type="button"
-            onClick={onOpenResume}
-            className="inline-flex min-h-12 cursor-pointer items-center gap-2 rounded-full border border-white/25 px-6 font-semibold text-white transition-colors hover:bg-white/10"
-          >
-            <FileText className="size-4" aria-hidden="true" />
-            View my resume
-          </button>
-        </div>
       </motion.div>
-
-      <div
-        aria-hidden="true"
-        className="absolute bottom-28 hidden h-11 w-7 justify-center rounded-full border-2 border-white/40 pt-2 sm:flex"
-      >
-        <span className="scroll-wheel block h-2 w-1 rounded-full bg-glow-pink" />
-      </div>
-
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 1440 120"
-        preserveAspectRatio="none"
-        className="absolute -bottom-px left-0 h-20 w-full text-paper sm:h-28"
-      >
-        <path
-          fill="currentColor"
-          d="M0 64c120-40 260-56 400-28s250 70 420 52 260-74 400-70 160 34 220 50v52H0Z"
-        />
-      </svg>
     </section>
   );
 }

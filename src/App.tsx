@@ -24,7 +24,7 @@ export default function App() {
       </a>
       <Header theme={theme} onToggleTheme={toggle} onOpenResume={openResume} />
       <main>
-        <Hero onOpenResume={openResume} />
+        <Hero />
         <Work />
         <About />
         <Contact />

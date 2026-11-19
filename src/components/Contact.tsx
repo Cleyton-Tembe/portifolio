@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 import { profile } from "../data/site";
-import { GitHubIcon, LinkedInIcon } from "./icons";
+import { LinkedInIcon } from "./icons";
 
 export default function Contact() {
   const gmailLink = (to: string) =>
@@ -25,12 +25,8 @@ export default function Contact() {
             // contact
           </p>
           <h2 className="mx-auto mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            Have a role or a project in mind?
+            Have a role or a project in mind? Contact me
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-white/75">
-            I'm open to junior and internship roles and to freelance work. Tell
-            me what you're building and I'll reply within a couple of days.
-          </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {profile.email && (
@@ -53,17 +49,6 @@ export default function Contact() {
                 LinkedIn
               </a>
             )}
-            <a
-              href={profile.github}
-              className={`${button} ${
-                profile.email
-                  ? "border border-white/25 text-white hover:bg-white/10"
-                  : "bg-glow-pink text-night"
-              }`}
-            >
-              <GitHubIcon className="size-4" />
-              Follow me on GitHub
-            </a>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { beyondCode, facts, toolbox } from "../data/site";
+import { beyondCode, toolbox } from "../data/site";
 import SectionLabel from "./SectionLabel";
 import TechIcon from "./TechIcon";
 
@@ -39,8 +39,13 @@ export default function About() {
               </li>
             ))}
           </ul>
+        </div>
 
-          <h3 className="mt-10 font-display text-xl font-bold">Tools I use</h3>
+        <aside
+          aria-labelledby="facts-title"
+          className="self-start mt-22 rounded-3xl border border-line bg-paper p-6 sm:p-8"
+        >
+          <h3 className="font-display text-xl font-bold">Tools I use</h3>
           <ul className="mt-4 flex flex-wrap gap-3" aria-label="Tools I use">
             {toolbox.map((t) => (
               <li key={t}>
@@ -48,23 +53,6 @@ export default function About() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <aside
-          aria-labelledby="facts-title"
-          className="self-start rounded-3xl border border-line bg-paper p-6 sm:p-8"
-        >
-          <h3 id="facts-title" className="font-display text-xl font-bold">
-            At a glance
-          </h3>
-          <dl className="mt-5 divide-y divide-line">
-            {facts.map((f) => (
-              <div key={f.label} className="py-3.5">
-                <dt className="font-mono text-sm text-ink-soft">{f.label}</dt>
-                <dd className="mt-1 font-medium">{f.value}</dd>
-              </div>
-            ))}
-          </dl>
         </aside>
       </div>
     </section>
