@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 import { profile } from "../data/site";
-import { LinkedInIcon } from "./icons";
+import { LinkedInIcon, WhatsAppIcon } from "./icons";
 
 export default function Contact() {
   const gmailLink = (to: string) =>
@@ -10,18 +10,12 @@ export default function Contact() {
 
   return (
     <section id="contact" className="h-screen flex justify-center items-center">
-      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-4xl bg-night px-6 dark:ring-1 dark:ring-white/10 dark:bg-night-2/60 py-16 text-center text-white sm:px-12 sm:py-20">
-        <div
-          aria-hidden="true"
-          className="absolute -top-24 -left-24 size-72 rounded-full bg-glow-violet/40 blur-3xl"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute -right-20 -bottom-28 size-80 rounded-full bg-glow-pink/30 blur-3xl"
-        />
-
+      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-4xl bg-surface px-6 py-16 text-center text-ink ring-1 ring-line sm:px-12 dark:bg-night-2/60 dark:text-white dark:ring-white/10 sm:py-20">
         <div>
-          <p className="font-mono text-sm text-glow-pink" aria-hidden="true">
+          <p
+            className="font-mono text-sm text-pink dark:text-glow-pink"
+            aria-hidden="true"
+          >
             // contact
           </p>
           <h2 className="mx-auto mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight sm:text-5xl">
@@ -29,6 +23,17 @@ export default function Contact() {
           </h2>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {profile.whatsapp && (
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={`https://wa.me/${profile.whatsapp.replace(/\D/g, "")}`}
+                className={`${button} bg-[#25D366] text-night`}
+              >
+                <WhatsAppIcon className="size-4" />
+                WhatsApp
+              </a>
+            )}
             {profile.email && (
               <a
                 target="_blank"
@@ -43,7 +48,7 @@ export default function Contact() {
             {profile.linkedin && (
               <a
                 href={profile.linkedin}
-                className={`${button} border border-white/25 text-white hover:bg-white/10`}
+                className={`${button} border border-ink/25 text-ink hover:bg-ink/5 dark:border-white/25 dark:text-white dark:hover:bg-white/10`}
               >
                 <LinkedInIcon className="size-4" />
                 LinkedIn

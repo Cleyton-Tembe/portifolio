@@ -13,6 +13,7 @@ export const profile = {
     pdf: "Resume_Cleyton_Tembe.pdf",
     image: "resume.webp",
   },
+  whatsapp: "+258 85 278 1397",
 };
 
 export type Project = {
