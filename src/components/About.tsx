@@ -1,10 +1,13 @@
-import { beyondCode, toolbox } from "../data/site";
+import { toolbox } from "../data/site";
 import SectionLabel from "./SectionLabel";
 import TechIcon from "./TechIcon";
 
 export default function About() {
   return (
-    <section id="about" className="border-y border-line bg-surface">
+    <section
+      id="about"
+      className="border-y border-line bg-surface h-screen flex items-center justify-center"
+    >
       <div className="mx-auto grid max-w-6xl gap-14 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[6fr_5fr] lg:gap-20">
         <div>
           <SectionLabel>about me</SectionLabel>
@@ -24,26 +27,11 @@ export default function About() {
               the first line of code.
             </p>
           </div>
-
-          <h3 className="mt-10 font-display text-xl font-bold">
-            Beyond the code
-          </h3>
-          <ul className="mt-4 space-y-2 text-ink-soft">
-            {beyondCode.map((item) => (
-              <li key={item} className="flex gap-3">
-                <span
-                  aria-hidden="true"
-                  className="mt-2.5 size-1.5 shrink-0 rounded-full bg-pink"
-                />
-                {item}
-              </li>
-            ))}
-          </ul>
         </div>
 
         <aside
           aria-labelledby="facts-title"
-          className="self-start mt-22 rounded-3xl border border-line bg-paper p-6 sm:p-8"
+          className="self-start rounded-3xl border border-line bg-paper p-6 sm:p-8"
         >
           <h3 className="font-display text-xl font-bold">Tools I use</h3>
           <ul className="mt-4 flex flex-wrap gap-3" aria-label="Tools I use">
